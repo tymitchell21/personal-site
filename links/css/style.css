@@ -119,7 +119,7 @@ input, textarea, select, button, meter, progress {
     transition: all .4s ease-in-out;
 }
 .wrap {
-    max-width: 1000px;
+    max-width: 1250px;
 }
 #site-container, .wrap {
     margin: auto;
@@ -281,10 +281,34 @@ input, input[type="search"], select, textarea {
     clear: both;
     height: 20000px;
     background-color: lightgrey;
-    max-width: 1000px;
+    max-width: 1250px;
     margin: auto;
     word-wrap: break-word;
     z-index: 999;
+}
+#about-section {
+    display: flex;
+    margin: 100px 100px;
+    border-bottom: 1px solid black;
+}
+#self-photo {
+    margin: 10% 15% 10% 5%;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+}
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.project-row {
+    display: flex;
+}
+.project-cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
 }
 @media only screen and (max-width: 782px) {
     #main-container {
