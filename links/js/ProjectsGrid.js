@@ -45,4 +45,4 @@ class ProjectsGrid {
     }
 }
 
-const projectsGrid = new ProjectsGrid(1, 3, projectsElement)
+const projectsGrid = new ProjectsGrid(4, 3, projectsElement)

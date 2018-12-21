@@ -278,6 +278,7 @@ input, input[type="search"], select, textarea {
 	width: auto;
 }
 #main-container {
+    padding-top: 30px;
     clear: both;
     height: 20000px;
     background-color: lightgrey;
@@ -289,10 +290,10 @@ input, input[type="search"], select, textarea {
 #about-section {
     display: flex;
     margin: 100px 100px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(0,0,0,0.3);
 }
 #self-photo {
-    margin: 10% 15% 10% 5%;
+    margin: 10% 10% 10% 8%;
     width: 30%;
     height: 30%;
     border-radius: 50%;
@@ -301,14 +302,24 @@ input, input[type="search"], select, textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 20px;
+}
+#projects h1 {
+    margin-bottom: 100px;
+    text-decoration: underline;
 }
 .project-row {
     display: flex;
 }
 .project-cell {
-    width: 100px;
-    height: 100px;
+    width: 333.33px;
+    height: 333.33px;
+    margin: 0 20px 20px 0;
     border: 1px solid black;
+}
+.project-cell img {
+    width: 100%;
+    height: 100%;
 }
 @media only screen and (max-width: 782px) {
     #main-container {

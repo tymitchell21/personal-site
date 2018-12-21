@@ -8,16 +8,16 @@ class ProjectCell {
     createCell () {
         const newCell = document.createElement('a')
         const newImg = document.createElement('img')
-    
-        newImg.src = projectObject[this.rowIndex][this.projectIndex].src
-    
+        
+        if (projectsObject[this.rowIndex]) {
+            newImg.src = projectsObject[this.rowIndex].src
+        }
+
         newCell.dataset.rowIndex = this.rowIndex
         newCell.dataset.projectIndex = this.projectIndex
-    
         newCell.classList.add('project-cell')
-    
+
         newCell.appendChild(newImg)
-    
         return newCell
     }
 }
