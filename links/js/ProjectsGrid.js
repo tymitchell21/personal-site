@@ -12,10 +12,12 @@ class ProjectsGrid {
     }
 
     createGrid () {
+        let projectNum = 0
         for (let rowIndex=0; rowIndex<this.rowNum; rowIndex++) {
             this.projects.push([])
             for (let projectIndex=0; projectIndex<this.projectNum; projectIndex++) {
-                this.projects[rowIndex].push(new ProjectCell(rowIndex, projectIndex, 'src'))
+                this.projects[rowIndex].push(new ProjectCell(rowIndex, projectIndex, projectNum))
+                projectNum++
             }
         }
     }
@@ -34,15 +36,7 @@ class ProjectsGrid {
             })
             this.destination.appendChild(rowDiv)
         })
-
-        for(let row=0; row<this.rowNum; row++) {
-            const rowDiv = this.createRow()
-            for(let column=0; column<this.columnNum; column++) {
-                rowDiv.appendChild(this.findCell(row,column).element)
-            }
-            this.destination.appendChild(rowDiv)
-        }
     }
 }
 
-const projectsGrid = new ProjectsGrid(4, 3, projectsElement)
+const projectsGrid = new ProjectsGrid(2, 3, projectsElement)
