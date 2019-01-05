@@ -8,12 +8,16 @@ class ProjectCell {
 
     createCell () {
         const newCell = document.createElement('a')
-        const newDescription = document.createElement('h1')
+        const newDescription = document.createElement('div')
         const newImg = document.createElement('img')
         
         if (projectsObject[this.projectNum]) {
             newImg.src = projectsObject[this.projectNum].src
         }
+
+        newDescription.innerHTML += `<h1 class='project-description'>${projectsObject[this.projectNum].name}</h1>`
+        newDescription.innerHTML += "<p class='projects-mobile'>(not mobile friendly)</p>"
+        newDescription.classList.add('description')
 
         newCell.href = projectsObject[this.projectNum].url
         newCell.target = "_blank"
@@ -24,6 +28,7 @@ class ProjectCell {
 
         newCell.appendChild(newImg)
         newCell.appendChild(newDescription)
+
         return newCell
     }
 }

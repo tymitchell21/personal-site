@@ -143,6 +143,18 @@ a {
     margin-left: 20px;
     padding-top: 50px;
 }
+.description {
+    position: relative;
+    top: -30px;
+}
+.project-description {
+    text-align: center;
+    font-size: 0.75em;
+}
+.projects-mobile {
+    display: none;
+    font-size: 0.5em;
+}
 #projects h1 {
     margin-bottom: 100px;
 }
@@ -150,14 +162,16 @@ a {
     display: flex;
 }
 .project-cell {
+    background-color: white;
     width: 33.33%;
     height: 300px;
     margin: 0 20px 20px 0;
     border: 2px solid black;
 }
 .project-cell img {
+    border-bottom: 2px solid black;
     width: 100%;
-    height: 100%;
+    height: 80%;
 }
 .divider {
     width: 80%;
@@ -208,6 +222,13 @@ a {
         flex-direction: column;
         padding-top: 0px;
     }
+    .projects-mobile {
+        position: relative;
+        top: -80px;
+        text-align: center;
+        display: block;
+        font-size: 0.5em;
+    }
     #projects h1 {
         margin-bottom: 75px;
     }
@@ -222,7 +243,5 @@ a {
         border: 1px solid black;
     }
     .project-cell img {
-        width: 100%;
-        height: 100%;
     }
 }
