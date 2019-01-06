@@ -141,7 +141,7 @@ a {
     align-items: center;
     max-width: 80%;
     margin-left: 20px;
-    padding-top: 50px;
+    padding-top: 60px;
 }
 .description {
     position: relative;
@@ -167,16 +167,64 @@ a {
     width: 33.33%;
     height: 300px;
     margin: 0 20px 20px 0;
-    border: 2px solid black;
+    border: 2px solid rgb(0,0,0,0.5);
 }
 .project-cell img {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgb(0,0,0,0.5);
     width: 100%;
     height: 85%;
 }
 .divider {
     width: 80%;
     border-bottom: 1px solid rgb(0,0,0,0.3);
+    padding-top: 20px;
+}
+#project-anchor {
+    padding-top: 60px;
+}
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    width: 80%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+}
+form input, form textarea {
+    border:0; outline:0;
+    padding: 1em;
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top: 1em;
+    font-family: 'Merriweather', sans-serif;
+    font-size: 0.7em;
+    box-shadow: 0 1px 1px rgba(black, 0.1);
+    resize: none;
+}
+form textarea {
+    height: 82%;
+}
+#input-submit {
+    margin-top: 50px;
+    color: white; 
+    background: black;
+    cursor: pointer;
+    width: 100%;
+}
+#contact-input {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+#contact-input .left {
+    margin-right: 50px;
 }
 @media only screen and (max-width: 800px) {
     h1 {
@@ -201,13 +249,19 @@ a {
     #about-section {
         flex-direction: column;
         align-items: center;
-        margin: 35% 10% 10% 10%;
+        margin: 29% 10% 10% 10%;
     }
     #about-text {
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
+    }
+    #about-text h1 {
+        font-size: 1em;
+    }
+    #about-text p {
+        font-size: 0.7em;
     }
     #self-photo {
         margin: 0;
@@ -241,5 +295,23 @@ a {
     }
     .project-cell img {
         height: 80%;
+    }
+    #contact {
+        margin-top: -40px;
+    }
+    form {
+        font-size: 0.75em;
+    }
+    #contact-input {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+    #contact-input input {
+        height: 20px;
+    }
+    #contact-input textarea {
+        height: 100px;
+        width: 90%;
     }
 }
